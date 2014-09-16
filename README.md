@@ -7,6 +7,7 @@ See picture at https://plus.google.com/102013789165949124655/posts/Pnabd8xvcce f
 
 TODO - Fritzing Link for driver circuit.
 
+Code skeleton
 The code is quite rudimentary at this point in time. 
 The code runs a periodic check on the CPU temperature and locates an index of the temperature
 Basic parameters include
@@ -19,13 +20,16 @@ at the GPIO - the GPIO drives the base of a P2222 transistor in common emitter c
 which results in having a current gain at the collector on which the CPU Fan is connected
 
 Math used here
+
 	Minimum PWM value to keep the motor running  + (index / number of steps between min & max)* Rest of the PWM duty cycle span count
 	
-Testing and Validation 
+Testing and Validation
+
 As with all the open source code, if you are using my code, you are on whole 
 and sole responsible for your board, beard and beer and what not. Don't blame me
 
 Wishlist features 
+
 a) enhance code to shut off motor if temperature below 
 b) testing when CPU temperature exceeds max 
 c) Polling should be on interrupt ? rather than based on sleep 
